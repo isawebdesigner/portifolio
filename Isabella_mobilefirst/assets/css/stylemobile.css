@@ -1,0 +1,381 @@
+@charset "utf-8";
+
+/*um reset de página é quando nós reiniciamos a pagina.
+por essa razão que começamos com o valor 0, pois é o valor inicial de uma página.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*o pixel ->para tamnho e dimensões (largura x altura)
+o vh ou vw serve para largura de tela (mobile first)
+já o "em" serve SOMENTE para fontes (mobile first / css3)*/
+
+html{
+    height: 100vh;
+}
+
+/* adicionar cor de fundo */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom, #b33aa0 50%, #2d001e 100% );
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/*PARA CONFIGURAR O CSS VAMOS ATRIBUIR ESTRUTURAS E DEPOIS OS OBJETOS
+HEADER -> H1, NAV -> A:HOUVER*/
+
+header{
+    background-color: #740c519c;
+    margin-top: 3px;
+    border-radius: 7px;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
+nav{
+    background-color:#be92b1;
+    margin-top:3px;
+    border-radius: 7px;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
+main{
+    /* background-color: ; */
+    margin-top: 7px;
+    border-radius: 11px;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+
+header >h1{
+    text-align: center;
+    color: white;
+}
+
+main{
+    background-color:#c26f9c;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #c26f9c;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+img{
+    margin: auto;
+    display:block;
+}
+
+img#mobile{
+    display: block;
+}
+
+img#tablet{
+    display: none;
+}
+
+img#print{
+    display: none;
+}
+
+img#pc{
+    display: none;
+}
+
+img#tv{
+    display: none;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+ body {
+        background-image: url(../back-tablet.jpg);
+ }
+
+}#burger {
+    display: none;
+}
+
+menu {
+    display: block;
+    width: 90vw;
+    margin: auto;
+    background-color: #21203f;
+}
+
+menu>ul>li {
+    display: inline-block;
+    background-color: #21203f;
+}
+
+main {
+    width: 90vw;
+    margin: auto;
+}
+
+article>h2 {
+    padding-bottom: 17px;
+    width: 90vw;
+    margin: auto;
+}
+
+article>p {
+    text-align: justify;
+    margin-bottom: 17px;
+    text-indent: 17px;
+}
+
+footer {
+    width: 90vw;
+    margin: auto;
+}
+
+img#mobile {
+    display: none;
+}
+
+img#tablet {
+    display: block;
+}
+
+img#print {
+    display: none;
+}
+
+img#pc {
+    display: none;
+}
+
+/* media para tablet com  largura de tela menor que 768px para o maior de 992px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image:url("../back-tablet.jpg");
+
+    }
+
+    #burger {
+        display: none;
+    }
+
+
+    menu {
+        display: block;
+        width: 90vw;
+        margin: auto;
+        background-color: #21203f;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #21203f;
+
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: block;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* media para pc com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image:url("../back-pc.jpg");
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #21203f;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #21203f;
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* media para smart_tv com  largura de tela menor que 992px para o maior de 1200px
+onde sera modificado as medidas do menu, menu lista, main > article onde o menu
+deve estar bloqueado seguindo as margens e cor de fundo dos elementos e 
+deixando assim o menu burger oculto, forçando assim o menu aparecendo inline-block
+(na horizontal) e sua exibição de imagens */
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image:url("../back-tv.jpg");
+        background-repeat: repeat-x;
+        background-attachment: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+        background-color: #21203f;
+    }
+
+    menu>ul>li {
+        display: inline-block;
+        background-color: #21203f;
+    }
+
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+
+    article>h2 {
+        padding-bottom: 17px;
+    }
+
+    article>p {
+        text-align: justify;
+        margin-bottom: 17px;
+        text-indent: 17px;
+    }
+
+    footer {
+        width: 90vw;
+        margin: auto;
+    }
+
+    img#mobile {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
+    }
+
+    /*adicionar cor de fundo*/
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #bb87caf6;
+    }
+}
